@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Balls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Walls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Flipper leftt.tscn" type="PackedScene" id=4]
+[ext_resource path="res://FlipRight.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Bumper.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Score.tscn" type="PackedScene" id=7]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -1, -1 )
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 400.0
+margin_bottom = 600.0
+color = Color( 0.478431, 0.0823529, 0.0823529, 1 )
+
+[node name="Balls" parent="." instance=ExtResource( 2 )]
+position = Vector2( 81, 257 )
+
+[node name="RichTextLabel" parent="Balls" instance=ExtResource( 7 )]
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = -240.0
+margin_right = 208.0
+margin_bottom = -200.0
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Walls" parent="." instance=ExtResource( 3 )]
+position = Vector2( -7, 241 )
+rotation = 1.5708
+
+[node name="Walls2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 401, 241 )
+rotation = 1.5708
+
+[node name="Walls3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -242, 471 )
+rotation = 0.218166
+
+[node name="Walls4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 601, 471 )
+rotation = -0.218166
+
+[node name="Flipper Left" parent="." instance=ExtResource( 4 )]
+position = Vector2( 129, 545 )
+
+[node name="Flipper Right" parent="." instance=ExtResource( 5 )]
+position = Vector2( 225, 545 )
+
+[node name="Bumper" parent="." instance=ExtResource( 6 )]
+position = Vector2( 81, 401 )
+scale = Vector2( 0.3, 0.3 )
+
+[connection signal="body_entered" from="Balls" to="Bumper" method="_on_Balls_body_entered"]
