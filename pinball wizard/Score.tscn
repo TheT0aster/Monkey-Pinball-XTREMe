@@ -5,7 +5,5 @@
 [node name="RichTextLabel" type="RichTextLabel"]
 margin_right = 240.0
 margin_bottom = 40.0
-visible_characters = 50
-percent_visible = 4.54545
 text = "i am stupid"
 script = ExtResource( 1 )

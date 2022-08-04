@@ -10,6 +10,3 @@ func _process(delta):
 		terminal *= terminal_velocity
 		set_linear_velocity(terminal)
 		print (linear_velocity)
-
-func _on_Bumper_body_entered(body):
-	score += 1

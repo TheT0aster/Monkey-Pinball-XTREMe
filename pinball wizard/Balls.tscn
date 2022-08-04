@@ -4,14 +4,16 @@
 [ext_resource path="res://Balls.gd" type="Script" id=2]
 
 [sub_resource type="PhysicsMaterial" id=2]
-friction = 0.11
-bounce = 0.48
+bounce = 0.3
 
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Balls" type="RigidBody2D"]
 mass = 2.00306
 physics_material_override = SubResource( 2 )
+gravity_scale = 7.79
+contacts_reported = 2
+contact_monitor = true
 script = ExtResource( 2 )
 
 [node name="Untitled6820220802222557" type="Sprite" parent="."]

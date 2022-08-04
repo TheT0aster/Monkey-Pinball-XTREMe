@@ -20,18 +20,12 @@ color = Color( 0.478431, 0.0823529, 0.0823529, 1 )
 [node name="Balls" parent="." instance=ExtResource( 2 )]
 position = Vector2( 81, 257 )
 
-[node name="RichTextLabel" parent="Balls" instance=ExtResource( 7 )]
-anchor_bottom = 1.0
-margin_left = -32.0
-margin_top = -240.0
-margin_right = 208.0
-margin_bottom = -200.0
-visible_characters = -1
-percent_visible = 1.0
-
 [node name="Walls" parent="." instance=ExtResource( 3 )]
 position = Vector2( -7, 241 )
 rotation = 1.5708
+
+[node name="Walls5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 209, -15 )
 
 [node name="Walls2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 401, 241 )
@@ -51,8 +45,23 @@ position = Vector2( 129, 545 )
 [node name="Flipper Right" parent="." instance=ExtResource( 5 )]
 position = Vector2( 225, 545 )
 
-[node name="Bumper" parent="." instance=ExtResource( 6 )]
-position = Vector2( 81, 401 )
+[node name="Bumper" parent="." groups=["Bumpers"] instance=ExtResource( 6 )]
+position = Vector2( 65, 401 )
 scale = Vector2( 0.3, 0.3 )
+
+[node name="Bumper2" parent="." groups=["Bumpers"] instance=ExtResource( 6 )]
+position = Vector2( 161, 433 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Bumper3" parent="." groups=["Bumpers"] instance=ExtResource( 6 )]
+position = Vector2( 225, 473 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="RichTextLabel" parent="." instance=ExtResource( 7 )]
+anchor_bottom = 1.0
+margin_left = 49.0
+margin_top = 17.0
+margin_right = 289.0
+margin_bottom = 57.0
 
 [connection signal="body_entered" from="Balls" to="Bumper" method="_on_Balls_body_entered"]

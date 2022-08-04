@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
 func _process(delta):
-	set_rotation(-3.14159)
-	if Input.get_action_strength("flip_left") > 0:
+	if get_rotation() > 3.14159:
+		set_rotation(get_rotation()-.03)
+	
+	if Input.get_action_strength("flip_right") > 0:
 		 
-		set_rotation(3.14159 + Input.get_action_strength("flip_left"))
-		#print (Input.get_action_strength("flip_right"))
-		#print (get_rotation())
+		set_rotation(3.14159 + Input.get_action_strength("flip_right"))
+		
