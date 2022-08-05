@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Game Over" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 400.0
+margin_bottom = 600.0
+color = Color( 0.729412, 0.509804, 0.0941176, 1 )

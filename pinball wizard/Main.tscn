@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Balls.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://FlipRight.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Bumper.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Score.tscn" type="PackedScene" id=7]
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=8]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 8 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1, -1 )
@@ -58,10 +62,13 @@ position = Vector2( 225, 473 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="RichTextLabel" parent="." instance=ExtResource( 7 )]
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 49.0
+margin_left = 161.0
 margin_top = 17.0
-margin_right = 289.0
-margin_bottom = 57.0
+margin_right = 401.0
+margin_bottom = 59.0
+theme = SubResource( 1 )
+fit_content_height = true
 
 [connection signal="body_entered" from="Balls" to="Bumper" method="_on_Balls_body_entered"]
