@@ -1,8 +1,7 @@
-extends StaticBody2D
+extends Area2D
 
+onready var ball: Balls = $"/root/Main/Balls"
 
-func _on_Balls_body_entered(body):
-	print (body.get_name())
-	if body.get_name() == "StaticBody2D":
-		print ("sussy")
+func _process(_delta):
+	if (overlaps_body(ball)):
 		get_tree().change_scene_to(load('res://Game Over.tscn'))

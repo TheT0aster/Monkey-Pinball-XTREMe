@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://show.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Play.gd" type="Script" id=2]
+[ext_resource path="res://Untitled-1 (1).png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.39, 0.0468, 0.0468, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.831373, 0.0980392, 0.0980392, 1 )
+
+[node name="Title" type="Node2D"]
+
+[node name="Untitled-1(1)" type="Sprite" parent="."]
+position = Vector2( 200, 301 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 239.005
+margin_top = 211.333
+margin_right = 374.005
+margin_bottom = 272.333
+custom_colors/font_color = Color( 1, 0.729412, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "START"
+script = ExtResource( 2 )

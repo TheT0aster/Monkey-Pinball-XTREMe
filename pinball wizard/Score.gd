@@ -1,4 +1,4 @@
 extends RichTextLabel
 
-func _process(delta):
+func _process(_delta):
 	set_text(str(Balls.score))
