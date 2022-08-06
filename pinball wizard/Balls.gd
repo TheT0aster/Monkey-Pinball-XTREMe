@@ -10,3 +10,11 @@ func _process(delta):
 		terminal *= terminal_velocity
 		set_linear_velocity(terminal)
 		print (linear_velocity)
+
+
+
+
+
+func _on_DeathZone_body_entered(body):
+	if body.get_name() == "DeathZone":
+		get_tree().change_scene_to(load('res://Game Over.tscn'))
