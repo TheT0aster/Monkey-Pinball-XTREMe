@@ -27,7 +27,8 @@ margin_bottom = 600.0
 color = Color( 0.478431, 0.0823529, 0.0823529, 1 )
 
 [node name="Balls" parent="." instance=ExtResource( 2 )]
-position = Vector2( 173, 316 )
+position = Vector2( 131, 245 )
+continuous_cd = 1
 
 [node name="Walls" parent="." instance=ExtResource( 3 )]
 position = Vector2( -7, 241 )
@@ -42,29 +43,33 @@ position = Vector2( 401, 241 )
 rotation = 1.5708
 
 [node name="Walls3" parent="." instance=ExtResource( 3 )]
-position = Vector2( -224, 467 )
+position = Vector2( -261, 457 )
 rotation = 0.218166
 
 [node name="Walls4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 614, 468 )
+position = Vector2( 659, 457 )
 rotation = -0.218166
 
 [node name="Flipper Left" parent="." instance=ExtResource( 4 )]
-position = Vector2( 144, 540 )
+position = Vector2( 103, 532 )
+rotation = 0.436332
+scale = Vector2( 0.18, 0.13 )
 
 [node name="Flipper Right" parent="." instance=ExtResource( 5 )]
-position = Vector2( 239, 540 )
+position = Vector2( 293, 532 )
+rotation = 2.70526
+scale = Vector2( 0.18, 0.13 )
 
 [node name="Bumper" parent="." groups=["Bumpers"] instance=ExtResource( 6 )]
-position = Vector2( 52, 397 )
+position = Vector2( 71, 321 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="Bumper2" parent="." groups=["Bumpers"] instance=ExtResource( 6 )]
-position = Vector2( 294, 324 )
+position = Vector2( 221, 241 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="Bumper3" parent="." groups=["Bumpers"] instance=ExtResource( 6 )]
-position = Vector2( 299, 417 )
+position = Vector2( 330, 413 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="RichTextLabel" parent="." instance=ExtResource( 7 )]

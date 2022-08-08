@@ -1,8 +1,14 @@
 extends KinematicBody2D
 
-func _process(delta):
+var start_rotation
+
+#this function can be removed if you change the angle in the flipper editor instead of main
+#you would just change var start_rotation to var start_rotation = get_rotation()
+func _ready():
+	start_rotation = get_rotation()
+
+func _physics_process(delta):
 	if Input.get_action_strength("flip_right") > 0:
-		if (get_rotation() < 3.14159 + Input.get_action_strength("flip_right")):
-			set_rotation(get_rotation() + 0.4)
-	elif get_rotation() > 3.14159:
-		set_rotation(get_rotation()-.1)
+		set_rotation(lerp(get_rotation(), start_rotation + Input.get_action_strength("flip_right"), 0.6))
+	elif get_rotation() > start_rotation:
+		set_rotation(lerp(get_rotation(), start_rotation, 0.6))

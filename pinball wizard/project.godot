@@ -18,6 +18,10 @@ config/icon="res://icon.png"
 
 Balls="*res://Balls.gd"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
 window/size/width=400
@@ -46,6 +50,7 @@ flip_left={
 
 [physics]
 
+common/physics_fps=240
 common/enable_pause_aware_picking=true
 
 [rendering]
